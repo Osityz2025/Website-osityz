@@ -856,7 +856,9 @@ export default function Home() {
                 {/* Social Links */}
                 <div className="flex items-center space-x-4">
                   <a 
-                    href="#" 
+                    href="https://www.instagram.com/osityz.ai/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center hover:from-pink-600 hover:to-pink-700 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/40"
                   >
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -865,7 +867,9 @@ export default function Home() {
                   </a>
                   
                   <a 
-                    href="#" 
+                    href="https://linkedin.com/company/osityz" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/40"
                   >
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">

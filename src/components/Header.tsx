@@ -10,13 +10,12 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 group">
               <div className="relative">
-                <Image
-                  src="/Osityz Logoo.png"
+                <img
+                  src="/osityz-logo.png?v=1"
                   alt="Osityz Logo"
                   width={48}
                   height={48}
                   className="h-12 w-12 transition-transform duration-200 group-hover:scale-105"
-                  priority
                 />
               </div>
               <span className="text-white font-bold text-xl tracking-tight group-hover:text-gray-200 transition-colors duration-200">

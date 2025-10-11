@@ -16,7 +16,16 @@ const nextConfig: NextConfig = {
   
   // Optimize images
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'https',
+        hostname: 'localhost',
+      },
+    ],
     dangerouslyAllowSVG: true,
   },
 };
