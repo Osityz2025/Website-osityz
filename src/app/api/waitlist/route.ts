@@ -1,18 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
-import fs from 'fs';
-import path from 'path';
-
-function getLogoBase64(): string {
-  try {
-    const logoPath = path.join(process.cwd(), 'public', 'osityz-logo.jpeg');
-    const data = fs.readFileSync(logoPath);
-    return `data:image/jpeg;base64,${data.toString('base64')}`;
-  } catch {
-    return '';
-  }
-}
 
 export async function POST(request: NextRequest) {
   try {
@@ -56,7 +44,7 @@ export async function POST(request: NextRequest) {
     const resendApiKey = process.env.RESEND_API_KEY;
     if (resendApiKey && resendApiKey !== 'your_resend_api_key_here') {
       const resend = new Resend(resendApiKey);
-      const logoSrc = getLogoBase64();
+      const logoSrc = 'https://osityz.com/osityz-logo.jpeg';
 
       await resend.emails.send({
         from: 'Osityz <noreply@osityz.com>',
