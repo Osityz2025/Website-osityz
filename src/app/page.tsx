@@ -71,11 +71,6 @@ const roadmap = [
 ];
 
 
-const supabasePromise =
-  typeof window !== "undefined"
-    ? import("../../lib/supabase").then((mod) => mod.supabase)
-    : null;
-
 const workflowSteps = [
   {
     step: "01",
@@ -203,33 +198,25 @@ export default function HomePage() {
     setStatus("submitting");
 
     try {
-      if (typeof window === "undefined" || !supabasePromise) {
-        throw new Error("Form only available in browser");
-      }
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
 
-      const supabase = await supabasePromise;
+      const data = await res.json();
 
-      const { data: existingEmail, error: checkError } = await supabase
-        .from("newsletter_subscriptions")
-        .select("email")
-        .eq("email", email)
-        .single();
-
-      if (checkError && checkError.code !== "PGRST116") {
-        throw checkError;
-      }
-
-      if (existingEmail) {
+      if (data.duplicate) {
         setStatus("duplicate");
         setTimeout(() => setStatus("idle"), 3000);
         return;
       }
 
-      const { error } = await supabase
-        .from("newsletter_subscriptions")
-        .insert([{ email }]);
-
-      if (error) throw error;
+      if (!data.success) {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 3000);
+        return;
+      }
 
       setStatus("success");
       setEmail("");
