@@ -9,11 +9,6 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['@supabase/supabase-js'],
   },
   
-  // Disable ESLint during builds for faster deployment
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
   // Optimize images
   images: {
     remotePatterns: [
