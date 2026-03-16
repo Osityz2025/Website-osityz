@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Vision | Osityz",
+  description:
+    "Osityz is building the operating system for maritime commercial workflows — helping shipbrokers, charterers, traders, and operators work faster.",
+};
 import { AlertTriangle, Zap, Target, ArrowRight, Workflow, Globe, Users, Bot } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 
