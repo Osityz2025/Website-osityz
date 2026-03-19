@@ -25,9 +25,24 @@ const faqs = [
       "Yes. Osityz is designed to use AI for practical workflow support such as parsing emails, extracting structured shipping information, surfacing matches, and helping draft responses faster.",
   },
   {
+    question: "How is Osityz different from a TMS or freight software?",
+    answer:
+      "Most TMS and freight platforms are built around operations and logistics execution. Osityz is focused on the commercial side — the workflow between brokers, charterers, and traders where information moves through emails, circulars, and market messages. It is built specifically around maritime chartering logic, not adapted from generic business software.",
+  },
+  {
+    question: "What does Osityz cost?",
+    answer:
+      "Pricing has not been announced yet. We are currently focused on building and refining the platform with early users. Join the waitlist to be among the first to hear about pricing and access.",
+  },
+  {
+    question: "When will Osityz launch?",
+    answer:
+      "We are actively building. Core platform features are in development through Q1–Q2 2026, with early access being opened to waitlist members as we progress. Join the waitlist to stay updated.",
+  },
+  {
     question: "Is Osityz live yet?",
     answer:
-      "Osityz is currently evolving, and early access is focused on product development, workflow refinement, and user feedback.",
+      "Osityz is currently in active development. Early access is focused on product development, workflow refinement, and user feedback.",
   },
   {
     question: "How can I stay updated?",

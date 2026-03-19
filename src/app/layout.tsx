@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   description:
     "AI-powered maritime workflow platform for shipbrokers, charterers, traders, and operators.",
   icons: {
-    icon: "/osityz_logo_transparent.png",
-    shortcut: "/osityz_logo_transparent.png",
-    apple: "/osityz_logo_transparent.png",
+    icon: "/osityz logo simple.png",
+    shortcut: "/osityz logo simple.png",
+    apple: "/osityz logo simple.png",
   },
   openGraph: {
     title: "Osityz | Maritime AI Platform",
@@ -119,6 +119,12 @@ export default function RootLayout({
                     className="text-base text-slate-300 transition hover:text-white"
                   >
                     Home
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="text-base text-slate-300 transition hover:text-white"
+                  >
+                    About
                   </Link>
                   <Link
                     href="/vision"
